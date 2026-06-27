@@ -1,43 +1,36 @@
-# Database Programming Assignment I
+# Hospital Management System Database Programming Assignment
 
-## Student Information
-- **Student Name:** Mohanad
-- **Student ID:** 32407
-- **Course:** Database Programming
-- **Instructor:** Eric Maniraguha
+## Business Problem
+
+Hospitals need an efficient way to manage patients, doctors, and appointments. A database system helps organize medical records, schedule appointments, and analyze hospital data for better decision-making.
 
 ---
 
-# Business Problem
+## Database Schema
 
-This project demonstrates a Hospital Management System database. The database is designed to manage hospital information including patients, doctors, and appointments. It helps organize medical records, improve scheduling, and support decision-making through SQL queries.
-
----
-
-# Database Schema
-
-The database contains three related tables:
+This project is based on a Hospital Management System with three related tables:
 
 - Patients
 - Doctors
 - Appointments
 
 Relationships:
-- One doctor can have many appointments.
+
 - One patient can have many appointments.
-- Appointments connect doctors and patients.
+- One doctor can have many appointments.
+- Each appointment belongs to one patient and one doctor.
 
 ---
 
-# ER Diagram
+## ER Diagram
 
-The ER Diagram is included in the **er_diagram** folder.
+The Entity Relationship Diagram (ER Diagram) is available in the **er_diagram** folder.
 
 ---
 
-# CTE Implementations
+## CTE Implementations
 
-The project includes the following Common Table Expressions:
+This project demonstrates the following Common Table Expressions (CTEs):
 
 - Simple CTE
 - Multiple CTEs
@@ -45,56 +38,82 @@ The project includes the following Common Table Expressions:
 - CTE with Aggregation
 - CTE with JOIN
 
-Each query includes comments, screenshots, and explanations.
-
 ---
 
-# Window Function Implementations
+## Window Function Implementations
 
-Implemented functions include:
+This project demonstrates the following SQL Window Functions:
 
-## Ranking Functions
+### Ranking Functions
+
 - ROW_NUMBER()
 - RANK()
 - DENSE_RANK()
 - PERCENT_RANK()
 
-## Aggregate Window Functions
+### Aggregate Window Functions
+
 - SUM() OVER()
 - AVG() OVER()
 - MIN() OVER()
 - MAX() OVER()
 
-## Navigation Functions
+### Navigation Functions
+
 - LAG()
 - LEAD()
 
-## Distribution Functions
+### Distribution Functions
+
 - NTILE()
 - CUME_DIST()
 
 ---
 
-# Analysis and Findings
+## Analysis and Findings
 
 ### Descriptive Analysis
-The database stores information about patients, doctors, and appointments.
+
+The database stores information about patients, doctors, and appointments. Window Functions and CTEs were used to analyze consultation fees, appointment rankings, cumulative distributions, and doctor performance.
 
 ### Diagnostic Analysis
-Window Functions help identify rankings, trends, and appointment statistics.
+
+The analysis showed differences in consultation fees and appointment distribution among doctors. Ranking and aggregation functions helped identify these differences.
 
 ### Prescriptive Analysis
-The hospital can improve scheduling efficiency and resource allocation based on analytical SQL reports.
+
+The hospital can improve appointment scheduling, balance doctor workloads, and monitor consultation fees using the generated analytical reports.
 
 ---
 
-# References
+## Project Structure
 
-- Oracle Database SQL Documentation
-- Oracle SQL Language Reference
+```
+database_programming_assignment1_32407_mohanad/
+
+│
+├── README.md
+├── screenshots/
+├── er_diagram/
+│   └── er_diagram.png
+│
+└── sql_scripts/
+    ├── create_tables.sql
+    ├── insert_data.sql
+    ├── cte_queries.sql
+    └── window_functions.sql
+```
 
 ---
 
-# Academic Integrity Statement
+## References
 
-I confirm that this assignment is my own original work. All external resources used for learning have been properly acknowledged.
+- Oracle Database SQL Language Reference
+- Oracle SQL Developer Documentation
+- Database Programming Course Materials
+
+---
+
+## Academic Integrity Statement
+
+I confirm that this assignment is my own original work. All SQL scripts, screenshots, documentation, and GitHub repository contents were prepared by me for this course. Any external resources used have been properly acknowledged.
